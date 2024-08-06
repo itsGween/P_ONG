@@ -35,7 +35,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
-        'sky-gradient': 'linear-gradient(to bottom, #b3d8ff, #1e81b0)',
+        "sky-gradient": "linear-gradient(to bottom, #b3d8ff, #1e81b0)",
       },
       animation: {
         aurora: "aurora 60s linear infinite",
@@ -52,17 +52,14 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    nextui(),
-    addVariablesForColors
-  ],
+  plugins: [nextui(), addVariablesForColors],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]) // Utilisation de backticks
   );
 
   addBase({

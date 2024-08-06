@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { Navbar } from "@/src/components";
+import { Carousel } from "@/src/components/ui/apple-cards-carousel";
+import CARD_CONTENT from "@/src/constants/index";
 
 export default function Home() {
   return (
-
-    <Navbar/> 
-    
+    <div>
+      <Navbar />
+      <Carousel items={CARD_CONTENT} /> {/* Passer directement CARD_CONTENT */}
+    </div>
   );
 }
