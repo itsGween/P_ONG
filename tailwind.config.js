@@ -36,6 +36,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
         "sky-gradient": "linear-gradient(to bottom, #b3d8ff, #1e81b0)",
+        "red-white-gradient": "linear-gradient(to right, #ff0000, #ffffff)",
       },
       animation: {
         aurora: "aurora 60s linear infinite",

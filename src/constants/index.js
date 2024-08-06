@@ -1,4 +1,3 @@
-// src/constants/index.js
 import Savane from "../assets/image/savane.jpg";
 import Montagne from "../assets/image/montagne.jpg";
 import Femme_Africaine from "../assets/image/femme_africaine.jpg";
@@ -8,34 +7,40 @@ import Champs_de_fleurs from "../assets/image/champs_de_fleurs.jpg";
 
 const CARD_CONTENT = [
   {
-    title: "Titre de la carte 1",
+    title: "Oeuvres De Misericordes",
     description: "Description de la carte 1.",
     src: Savane,
+    link: "/card-1",
   },
   {
-    title: "Titre de la carte 2",
+    title: "VENDREDI DU PRO",
     description: "Description de la carte 2.",
     src: Montagne,
+    link: "/card-2",
   },
   {
-    title: "Titre de la carte 3",
+    title: "FORMATION SUR L'AMOUR",
     description: "Description de la carte 3.",
     src: Femme_Africaine,
+    link: "/card-3",
   },
   {
-    title: "Titre de la carte 4",
+    title: "VIE DE FOI",
     description: "Description de la carte 4.",
-    src: Desert,
+    src: Champs_de_fleurs,
+    link: "/card-4",
   },
   {
-    title: "Titre de la carte 5",
+    title: "DIVERTISSEMENT",
     description: "Description de la carte 5.",
     src: coucher_de_soleil,
+    link: "/card-5",
   },
   {
-    title: "Titre de la carte 6",
+    title: "AUTRES",
     description: "Description de la carte 6.",
-    src: Champs_de_fleurs,
+    src: Desert,
+    link: "/card-6",
   },
 ];
 
