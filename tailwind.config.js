@@ -6,10 +6,10 @@ const { nextui } = require("@nextui-org/react");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",  // Combines .ts and .tsx from the first config with .js and .jsx from the second
+    "./src/**/*.{js,jsx,ts,tsx}", // Utilisation de ** pour inclure tous les fichiers sous src
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class",  // Uses 'class' which is common in both configs
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -20,12 +20,12 @@ module.exports = {
         "black-200": "#090325",
         "white-100": "#f3f3f3",
         "accounting-white": "#f8f9fa",
-        'accounting-gray': '#d1d5db',  // Un gris doux
-        'accounting-blue': '#dbeafe',  // Un bleu clair, calme et professionnel
-        'accounting-green': '#d1fae5',
-        'skyblue': '#87ceeb', // Un vert doux pour la sécurité financière
-        'lightblue': '#b3d8ff',
-        'deepblue': '#1e81b0'
+        "accounting-gray": "#d1d5db",
+        "accounting-blue": "#dbeafe",
+        "accounting-green": "#d1fae5",
+        skyblue: "#87ceeb",
+        lightblue: "#b3d8ff",
+        deepblue: "#1e81b0",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
@@ -36,6 +36,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
         "sky-gradient": "linear-gradient(to bottom, #b3d8ff, #1e81b0)",
+        "red-white-gradient": "linear-gradient(to right, #ff0000, #ffffff)",
       },
       animation: {
         aurora: "aurora 60s linear infinite",
