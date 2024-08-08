@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <CarouselWithText />
       {/* <Carousel items={CARD_CONTENT} /> Passer directement CARD_CONTENT */}
-      sdde
+
       <HoverEffect items={CARD_CONTENT} />
     </div>
   );
