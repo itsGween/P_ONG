@@ -20,15 +20,15 @@ const CarouselWithText = () => {
 
   const events = [
     {
-      image: "/path/to/image1.jpg",
+      image: "./image/Savane.jpg",
       text: "Événement 1",
     },
     {
-      image: "/path/to/image2.jpg",
+      image: "./image/Desert.jpg",
       text: "Événement 2",
     },
     {
-      image: "/path/to/image3.jpg",
+      image: "./image/Montagne.jpg",
       text: "Événement 3",
     },
   ];

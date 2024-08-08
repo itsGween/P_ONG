@@ -1,9 +1,9 @@
-import Savane from "../assets/image/savane.jpg";
-import Montagne from "../assets/image/montagne.jpg";
-import Femme_Africaine from "../assets/image/femme_africaine.jpg";
-import Desert from "../assets/image/desert.jpg";
-import coucher_de_soleil from "../assets/image/coucher_de_soleil.jpg";
-import Champs_de_fleurs from "../assets/image/champs_de_fleurs.jpg";
+import Savane from "../../public/assets/image/savane.jpg";
+import Montagne from "../../public/assets/image/montagne.jpg";
+import Femme_Africaine from "../../public/assets/image/femme_africaine.jpg";
+import Desert from "../../public/assets/image/desert.jpg";
+import coucher_de_soleil from "../../public/assets/image/coucher_de_soleil.jpg";
+import Champs_de_fleurs from "../../public/assets/image/champs_de_fleurs.jpg";
 
 const CARD_CONTENT = [
   {
