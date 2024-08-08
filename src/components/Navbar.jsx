@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* Logo à gauche */}
         <div className="text-xl font-bold cursor-pointer">
           <img
-            src="/path/to/logo.png"
+            src="./logo_ONG.jpg"
             alt="Logo"
             className="w-12 h-12 md:w-16 md:h-16"
           />
