@@ -12,7 +12,7 @@ export const HoverEffect = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 mx-12", // Ajout de margin horizontal
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 mx-12 gap-4", // Ajout de margin horizontal et gap entre les cartes
         className
       )}
     >
@@ -20,7 +20,7 @@ export const HoverEffect = ({ items, className }) => {
         <Link
           href={item.link ?? "/"} // Provide a default link
           key={item.title}
-          className="relative group block p-2 h-full w-full"
+          className="relative group block p-2 h-full w-full card-container"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -42,13 +42,13 @@ export const HoverEffect = ({ items, className }) => {
             )}
           </AnimatePresence>
           <Card>
-            <Image
-              src={item.src}
-              alt={item.title}
-              className="rounded-t-2xl"
-              layout="responsive"
-              objectFit="cover"
-            />
+            <div className="overflow-hidden rounded-t-2xl">
+              <Image
+                src={item.src}
+                alt={item.title}
+                className="card-image"
+              />
+            </div>
             <CardTitle>{item.title}</CardTitle>
           </Card>
         </Link>
