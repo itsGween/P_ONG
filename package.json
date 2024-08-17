@@ -19,12 +19,8 @@
     "react-icons": "^5.3.0",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
-<<<<<<< HEAD
     "swiper": "^11.1.9",
     "tailwind-merge": "^2.4.0"
-=======
-    "tailwind-merge": "^2.5.2"
->>>>>>> 68159e284ad12ce5b98406a3bf59ac50cd131f83
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
