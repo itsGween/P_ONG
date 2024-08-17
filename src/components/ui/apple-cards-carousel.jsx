@@ -1,130 +1,62 @@
+// Explicitly mark this file as a Client Component
 "use client";
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  createContext,
-  useContext,
-} from "react";
-import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-  IconX,
-} from "@tabler/icons-react";
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useOutsideClick } from "@/hooks/use-outside-click";
+import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
-export const CarouselContext = createContext({
-  onCardClose: () => {},
-  currentIndex: 0,
-});
-
-export const Carousel = ({ items }) => {
+const Carousel = ({ items }) => {
   const carouselRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (carouselRef.current) {
-      checkScrollability();
-    }
+    const checkScrollability = () => {
+      if (carouselRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+        setCanScrollLeft(scrollLeft > 0);
+        setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
+      }
+    };
+
+    checkScrollability();
+    window.addEventListener('resize', checkScrollability);
+    return () => window.removeEventListener('resize', checkScrollability);
   }, []);
 
-  const checkScrollability = () => {
-    if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
-    }
-  };
-
   const scrollLeft = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
+    carouselRef.current?.scrollBy({ left: -300, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    }
-  };
-
-  const handleCardClose = (index) => {
-    setCurrentIndex(index);
+    carouselRef.current?.scrollBy({ left: 300, behavior: "smooth" });
   };
 
   return (
-    <CarouselContext.Provider
-      value={{ onCardClose: handleCardClose, currentIndex }}
-    >
-      <div className="relative w-full">
-        <div
-          className="flex w-full overflow-x-scroll py-10 md:py-20 scroll-smooth"
-          ref={carouselRef}
-          onScroll={checkScrollability}
-        >
-          <div className="flex flex-row justify-start gap-4 pl-4">
-            {items.map((item, index) => (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, delay: 0.2 * index },
-                }}
-                key={index}
-                className="rounded-3xl"
-              >
-                <Card card={item} index={index} />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        <div className="flex justify-end gap-2 mr-10">
-          <button onClick={scrollLeft} disabled={!canScrollLeft}>
-            <IconArrowNarrowLeft />
-          </button>
-          <button onClick={scrollRight} disabled={!canScrollRight}>
-            <IconArrowNarrowRight />
-          </button>
+    <div className="relative w-full flex justify-center items-center">
+      <div className="flex overflow-x-auto snap-mandatory snap-x py-10 md:py-20 scroll-smooth" ref={carouselRef}>
+        <div className="flex flex-nowrap gap-4 justify-center mx-auto">
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.1 * index } }}
+              className="shrink-0"
+            >
+              <Image src={item.src} alt={item.title} layout="fill" objectFit="cover" />
+            </motion.div>
+          ))}
         </div>
       </div>
-    </CarouselContext.Provider>
+      <button onClick={scrollLeft} disabled={!canScrollLeft} className="absolute left-0 z-10 p-2">
+        <IconArrowNarrowLeft />
+      </button>
+      <button onClick={scrollRight} disabled={!canScrollRight} className="absolute right-0 z-10 p-2">
+        <IconArrowNarrowRight />
+      </button>
+    </div>
   );
 };
 
-// Composant Card
-export const Card = ({ card, index }) => {
-  const { onCardClose } = useContext(CarouselContext);
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    onCardClose(index);
-  };
-
-  return (
-    <>
-      <div onClick={handleOpen} className="cursor-pointer">
-        <Image src={card.src} alt={card.title} width={384} height={240} />
-        <h2>{card.title}</h2>
-        <p>{card.description}</p>
-      </div>
-      {open && (
-        <div>
-          <IconX onClick={handleClose} />
-          <h2>{card.title}</h2>
-          <p>{card.description}</p>
-        </div>
-      )}
-    </>
-  );
-};
+export default Carousel;

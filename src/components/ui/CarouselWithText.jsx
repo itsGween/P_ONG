@@ -34,30 +34,24 @@ const CarouselWithText = () => {
   ];
 
   return (
-    <div className="carousel-container" style={{ position: "relative" }}>
+    <div className="carousel-container">
       <Slider {...settings}>
         {events.map((event, index) => (
-          <div key={index}>
-            <img
-              src={event.image}
-              alt={`Événement ${index + 1}`}
-              style={{ width: "100%", height: "auto" }}
-            />
+          <div key={index} className="carousel-slide relative">
+            <div className="relative h-full w-full">
+              <Image
+                src={event.image}
+                alt={`Événement ${index + 1}`}
+                fill // Use fill instead of layout="fill"
+                className="object-cover" // Apply object-fit via CSS
+              />
+            </div>
+            <h1 className="carousel-text">
+              {event.text}
+            </h1>
           </div>
         ))}
       </Slider>
-      <h1
-        style={{
-          position: "absolute",
-          bottom: "20px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          color: "white",
-          textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
-        }}
-      >
-        {events[currentSlide].text}
-      </h1>
     </div>
   );
 };
