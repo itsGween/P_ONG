@@ -17,10 +17,16 @@ const Footer = ({ partners }) => {
   };
 
   return (
-    <div id="contact" className="bg-gray-800 text-gray-100 py-8">
+    <div
+      id="contact"
+      style={{
+        background: "linear-gradient(to bottom, #FFFFFF, #E0FFE0)",
+      }}
+      className="text-gray-100 py-8"
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-bold text-white">NGO Name Here</h2>
+          <h2 className="text-lg font-bold text-black">NGO Name Here</h2>
           <button
             onClick={toggleOpen}
             className="focus:outline-none bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300"
@@ -32,7 +38,7 @@ const Footer = ({ partners }) => {
         {isOpen && (
           <div className="mt-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="text-white">
+              <div className="text-black">
                 <h3 className="text-lg font-bold mb-4">Contact Information</h3>
                 <p className="flex items-center mb-2">
                   <FaMapMarkerAlt className="mr-2 text-green-500" /> 123 NGO
@@ -45,7 +51,7 @@ const Footer = ({ partners }) => {
                   <FaPhone className="mr-2 text-green-500" /> +1 (555) 123-4567
                 </p>
               </div>
-              <div className="text-white">
+              <div className="text-black">
                 <h3 className="text-lg font-bold mb-4">Our Location</h3>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!..."
@@ -60,24 +66,28 @@ const Footer = ({ partners }) => {
               </div>
             </div>
             <div className="mt-4">
-              <h3 className="text-lg font-bold text-white">Our Partners</h3>
-              <div className="flex flex-wrap gap-4 justify-center items-center mt-2">
-                {partners.map((partner, index) => (
-                  <div
-                    key={index}
-                    className="bg-white p-2 rounded-lg shadow-lg"
-                  >
-                    <img
-                      src={partner.icon}
-                      alt={partner.name}
-                      className="h-16 w-16 object-contain"
-                    />
-                    <p className="text-black text-center mt-2">
-                      {partner.name}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <h3 className="text-lg font-bold text-black">Our Partners</h3>
+              {partners && partners.length > 0 ? (
+                <div className="flex flex-wrap gap-4 justify-center items-center mt-2">
+                  {partners.map((partner, index) => (
+                    <div
+                      key={index}
+                      className="bg-white p-2 rounded-lg shadow-lg"
+                    >
+                      <img
+                        src={partner.icon}
+                        alt={partner.name}
+                        className="h-16 w-16 object-contain"
+                      />
+                      <p className="text-black text-center mt-2">
+                        {partner.name}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-black">No partners available at the moment.</p>
+              )}
             </div>
           </div>
         )}
