@@ -44,7 +44,7 @@ function Hero() {
       </Swiper>
       <div
         className="absolute inset-0 bg-black opacity-50"
-        style={{ backgroundColor: "#865439" }}
+        style={{ backgroundColor: "#fff" }}
       ></div>
     </div>
   );

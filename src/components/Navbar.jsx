@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="text-xl font-bold cursor-pointer">
             <Link href="/">
               <img
-                src="/assets/logo_ONG.jpg"
+                src="/assets/logo_ONG.png"
                 alt="Logo"
                 className="w-20 h-10 sm:w-40 sm:h-12 md:w-30 md:h-15 lg:w-40 lg:h-20"
               />

@@ -8,7 +8,7 @@ import Chemin_champs from "./image/Chemin_champs.jpg";
 import Chemin_sable from "./image/Chemin_sable.jpg";
 import Enfant from "./image/Enfant.jpg";
 import Zebre from "./image/Zebre.jpg";
-import logo_ONG from "./logo_ONG.jpg";
+import logo_ONG from "./logo_ONG.png";
 
 export {
   Savane,
