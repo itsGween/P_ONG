@@ -43,11 +43,7 @@ export const HoverEffect = ({ items, className }) => {
           </AnimatePresence>
           <Card>
             <div className="overflow-hidden rounded-t-2xl">
-              <Image
-                src={item.src}
-                alt={item.title}
-                className="card-image"
-              />
+              <Image src={item.src} alt={item.title} className="card-image" />
             </div>
             <CardTitle>{item.title}</CardTitle>
           </Card>
