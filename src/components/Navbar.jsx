@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full bg-gradient-to-l from-red-500 to-white text-gray-800 shadow-lg z-50">
+      <nav className="fixed top-0 left-0 w-full bg-white  text-gray-800 shadow-lg z-50">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
           {/* Logo à gauche */}
           <div className="text-xl font-bold cursor-pointer">
@@ -26,41 +26,41 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <div className="relative">
               <button
-                className="hover:text-gray-700 transition-colors duration-200"
+                className="hover:text-red-700 transition-colors duration-200"
                 onClick={() => setCategoriesOpen(!isCategoriesOpen)}
               >
                 A Propos
               </button>
               {isCategoriesOpen && (
-                <ul className="absolute left-0 mt-2 w-48 bg-gradient-to-r from-white to-red-500 shadow-lg rounded-md z-50">
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-50">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       Qui sommes-nous
                     </a>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       Mission
                     </a>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       Fonctionnement
                     </a>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       L'équipe
                     </a>
@@ -70,25 +70,25 @@ const Navbar = () => {
             </div>
             <a
               href="#initiatives"
-              className="hover:text-gray-700 transition-colors duration-200"
+              className="hover:text-red-700 transition-colors duration-200"
             >
               Nos Initiatives
             </a>
             <a
               href="#"
-              className="hover:text-gray-700 transition-colors duration-200"
+              className="hover:text-red-700 transition-colors duration-200"
             >
               Videotheques
             </a>
             <a
               href="#"
-              className="hover:text-gray-700 transition-colors duration-200"
+              className="hover:text-red-700 transition-colors duration-200"
             >
               Liens
             </a>
             <a
               href="#contact"
-              className="hover:text-gray-700 transition-colors duration-200"
+              className="hover:text-red-700 transition-colors duration-200"
             >
               Contactez-nous
             </a>
@@ -120,41 +120,41 @@ const Navbar = () => {
           <div className="md:hidden bg-white shadow-md">
             <div className="relative">
               <button
-                className="block w-full text-center px-4 py-2 hover:bg-gray-100 transition-colors duration-200"
+                className="block w-full text-center px-4 py-2 hover:text-red-700 transition-colors duration-200"
                 onClick={() => setCategoriesOpen(!isCategoriesOpen)}
               >
                 A propos
               </button>
               {isCategoriesOpen && (
-                <ul className="bg-gradient-to-r from-white to-red-500 shadow-lg rounded-md">
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-50">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       Qui sommes-nous
                     </a>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       Mission
                     </a>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       Fonctionnement
                     </a>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 transition-colors duration-200">
+                  <li className="px-4 py-2 transition-colors duration-200">
                     <a
                       href="#"
-                      className="block hover:text-gray-700 transition-colors duration-200"
+                      className="block hover:text-red-700 transition-colors duration-200"
                     >
                       L'équipe
                     </a>
@@ -164,25 +164,25 @@ const Navbar = () => {
             </div>
             <a
               href="#initatives"
-              className="block text-center p-2 hover:bg-gray-100 transition-colors duration-200"
+              className="block text-center p-2 hover:text-red-700 transition-colors duration-200"
             >
               Nos initiatives
             </a>
             <a
               href="#"
-              className="block text-center p-2 hover:bg-gray-100 transition-colors duration-200"
+              className="block text-center p-2 hover:text-red-700 transition-colors duration-200"
             >
               Videotheques
             </a>
             <a
               href="#"
-              className="block text-center p-2 hover:bg-gray-100 transition-colors duration-200"
+              className="block text-center p-2 hover:text-red-700 transition-colors duration-200"
             >
               Liens
             </a>
             <a
               href="#contact"
-              className="block text-center p-2 hover:bg-gray-100 transition-colors duration-200"
+              className="block text-center p-2 hover:text-red-700 transition-colors duration-200"
             >
               Contactez-nous
             </a>

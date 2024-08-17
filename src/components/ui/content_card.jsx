@@ -1,14 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { styles } from "@/src/styles/styles";
 
 export function CardDemo({ items }) {
   return (
     <div id="initiatives" className="p-4 mx-auto max-w-7xl">
       {/* Heading */}
-      <h1 className="custom-heading text-3xl md:text-4xl font-bold text-center mb-6">
-        NOS INITIATIVES
-      </h1>
+      <h1 className={`${styles.heroSubText}`}>NOS INITIATIVES</h1>
 
       {/* Card Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
