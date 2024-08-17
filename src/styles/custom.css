@@ -1,4 +1,4 @@
-.card-image {
+/* .card-image {
     width: 100%;
     height: auto;
     max-width: 300px;
@@ -11,7 +11,7 @@
     max-width: 300px;
   }
 
-  /* styles/CarouselStyles.css */
+   styles/CarouselStyles.css 
 .carousel-container {
     position: relative;
   }
@@ -31,4 +31,14 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     z-index: 10;
   }
-  
+   */
+
+h1 {
+  text-align: center;
+}
+.custom-heading {
+  font-size: 25px;
+  padding-top: 40px;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: underline;
+}
