@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import SwiperCore, { EffectFade, Autoplay } from "swiper";
+import { styles } from "../styles/styles";
 
 // Install necessary Swiper components
 SwiperCore.use([EffectFade, Autoplay]);
@@ -35,10 +36,10 @@ function Hero() {
               alt="Dynamic Image"
             />
             <div className="absolute inset-0 flex items-center justify-center p-4">
-              <p className="text-white text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-tight text-center shadow-lg">
-                {textPhrases[index]}
-              </p>
-            </div>
+  <p className={`${styles.heroHeadText} text-center shadow-lg`}>
+    {textPhrases[index]}
+  </p>
+</div>
           </SwiperSlide>
         ))}
       </Swiper>
