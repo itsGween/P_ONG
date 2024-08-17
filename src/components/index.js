@@ -6,4 +6,12 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import CardDemo from "./ui/content_card";
 
-export { Navbar, Carousel, HoverEffect, CarouselWithText, Hero, Footer, CardDemo };
+export {
+  Navbar,
+  Carousel,
+  HoverEffect,
+  CarouselWithText,
+  Hero,
+  Footer,
+  CardDemo,
+};

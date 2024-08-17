@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Navbar } from "@/src/components";
+import custom from "@/src/styles/custom.css";
 import CarouselWithText from "@/src/components/ui/CarouselWithText";
 import { Carousel } from "@/src/components/ui/apple-cards-carousel";
 import { HoverEffect } from "@/src/components/ui/card-hover-effect";
@@ -21,24 +22,11 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Hero/>
+      <Hero />
+
       <CardDemo items={items} />
-      
 
-      
-
-      <Footer/>
-       
-      
-      
+      <Footer />
     </div>
-    
-
-    
-
-     
-
-
-    
   );
 }

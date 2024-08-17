@@ -4,6 +4,10 @@ import Femme_Africaine from "../../public/assets/image/femme_africaine.jpg";
 import Desert from "../../public/assets/image/desert.jpg";
 import coucher_de_soleil from "../../public/assets/image/coucher_de_soleil.jpg";
 import Champs_de_fleurs from "../../public/assets/image/champs_de_fleurs.jpg";
+import Chemin_champs from "../../public/assets/image/Chemin_champs.jpg";
+import Chemin_sable from "../../public/assets/image/Chemin_sable.jpg";
+import Enfant from "../../public/assets/image/Enfant.jpg";
+import Zebre from "../../public/assets/image/Zebre.jpg";
 
 const CARD_CONTENT = [
   {
@@ -41,6 +45,30 @@ const CARD_CONTENT = [
     description: "Description de la carte 6.",
     src: Desert,
     link: "/card-6",
+  },
+  {
+    title: " ",
+    description: "Description de la carte 7.",
+    src: Chemin_champs,
+    link: "/card-7",
+  },
+  {
+    title: " ",
+    description: "Description de la carte 8.",
+    src: Chemin_sable,
+    link: "/card-8",
+  },
+  {
+    title: " ",
+    description: "Description de la carte 9.",
+    src: Enfant,
+    link: "/card-9",
+  },
+  {
+    title: " ",
+    description: "Description de la carte 10.",
+    src: Zebre,
+    link: "/card-10",
   },
 ];
 

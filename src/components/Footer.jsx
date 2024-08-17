@@ -1,7 +1,13 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
-import { FaChevronUp, FaChevronDown, FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
+import {
+  FaChevronUp,
+  FaChevronDown,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhone,
+} from "react-icons/fa";
 
 const Footer = ({ partners }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +17,7 @@ const Footer = ({ partners }) => {
   };
 
   return (
-    <div className="bg-gray-800 text-gray-100 py-8">
+    <div id="contact" className="bg-gray-800 text-gray-100 py-8">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <h2 className="text-lg font-bold text-white">NGO Name Here</h2>
@@ -29,7 +35,8 @@ const Footer = ({ partners }) => {
               <div className="text-white">
                 <h3 className="text-lg font-bold mb-4">Contact Information</h3>
                 <p className="flex items-center mb-2">
-                  <FaMapMarkerAlt className="mr-2 text-green-500" /> 123 NGO Street, City, State, Zip
+                  <FaMapMarkerAlt className="mr-2 text-green-500" /> 123 NGO
+                  Street, City, State, Zip
                 </p>
                 <p className="flex items-center mb-2">
                   <FaEnvelope className="mr-2 text-green-500" /> contact@ngo.org
@@ -56,9 +63,18 @@ const Footer = ({ partners }) => {
               <h3 className="text-lg font-bold text-white">Our Partners</h3>
               <div className="flex flex-wrap gap-4 justify-center items-center mt-2">
                 {partners.map((partner, index) => (
-                  <div key={index} className="bg-white p-2 rounded-lg shadow-lg">
-                    <img src={partner.icon} alt={partner.name} className="h-16 w-16 object-contain" />
-                    <p className="text-black text-center mt-2">{partner.name}</p>
+                  <div
+                    key={index}
+                    className="bg-white p-2 rounded-lg shadow-lg"
+                  >
+                    <img
+                      src={partner.icon}
+                      alt={partner.name}
+                      className="h-16 w-16 object-contain"
+                    />
+                    <p className="text-black text-center mt-2">
+                      {partner.name}
+                    </p>
                   </div>
                 ))}
               </div>
